@@ -26,7 +26,7 @@ export default function App() {
   // Initialize Socket connection
   useEffect(() => {
     if (!user) return;
-    const newSocket = io(SOCKET_URL);
+    const newSocket = io("https://classroom-chat-6yh1.onrender.com/");
     setSocket(newSocket);
 
     newSocket.emit('user_join', user);
